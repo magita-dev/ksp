@@ -1,0 +1,21 @@
+{
+  "name": "cron-reindex",
+  "version": "1.0.0",
+  "description": "Catalyst Cron nightly re-indexing job — upserts Zia entity extractions for case narratives",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/uuid": "^10.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0",
+    "fast-check": "^3.20.0"
+  }
+}

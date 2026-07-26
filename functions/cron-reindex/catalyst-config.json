@@ -1,0 +1,6 @@
+{
+  "name": "cron-reindex",
+  "type": "Cron",
+  "stack": "node18",
+  "main": "src/index.ts"
+}

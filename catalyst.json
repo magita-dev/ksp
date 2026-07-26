@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "targets": [
+      "orchestrator",
+      "cron-reindex",
+      "ivr"
+    ],
+    "ignore": []
+  },
+  "client": {
+    "source": "frontend/out"
+  }
+}

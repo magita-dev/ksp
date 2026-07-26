@@ -1,11 +1,19 @@
-<div align="center">
+# KSP Crime AI
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Intelligent conversational AI for the KSP Crime Database — KSP Datathon 2026, Challenge 1.
 
-  <h1>Built with AI Studio</h2>
+## Structure
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+- `frontend/` — Next.js chat UI (Catalyst Slate)
+- `functions/orchestrator/` — LangGraph multi-agent backend (Catalyst Advanced I/O Function)
+- `scripts/seed/` — Synthetic dataset seed script
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Quick Start
 
-</div>
+1. Install dependencies: `npm install` (from root)
+2. Seed the database: `npm run seed`
+3. Run the dev server: `npm run dev`
+
+## Environment Variables
+
+See `.env.example` for required variables.

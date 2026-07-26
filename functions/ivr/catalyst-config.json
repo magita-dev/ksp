@@ -1,0 +1,6 @@
+{
+  "name": "ivr",
+  "type": "Express",
+  "stack": "node18",
+  "main": "src/index.ts"
+}

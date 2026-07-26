@@ -1,0 +1,6 @@
+{
+  "name": "KSP Crime AI",
+  "description": "Karnataka State Police Crime Investigation Assistant",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
