@@ -52,7 +52,7 @@ const AuthContext = createContext<AuthContextValue>({
 });
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const supabase = createClient();
+  const [supabase] = useState(() => createClient());
   const [session, setSession] = useState<Session | null>(null);
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<OfficerProfile | null>(null);

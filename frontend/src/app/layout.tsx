@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { AuthProvider } from "@/lib/auth-context";
 import "./globals.css";
 
@@ -25,9 +26,10 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
         />
-        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-        <script
+        <Script src="https://cdn.tailwindcss.com?plugins=forms,container-queries" strategy="beforeInteractive" />
+        <Script
           id="tailwind-config"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               tailwind.config = {

@@ -1,14 +1,33 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import dynamic from "next/dynamic";
 import VoiceInput from "@/components/VoiceInput";
-import { CrimeMap } from "@/components/CrimeMap";
 import { CaseDatabaseView } from "@/components/CaseDatabaseView";
-import { DashboardView } from "@/components/DashboardView";
 import { NewCaseModal } from "@/components/NewCaseModal";
 import { useAuth } from "@/lib/auth-context";
 import { tierLabel } from "@/lib/tiers";
 import { generateQueryReportPdf } from "@/lib/pdfExporter";
+
+const CrimeMap = dynamic(() => import("@/components/CrimeMap").then((m) => m.CrimeMap), {
+  ssr: false,
+  loading: () => (
+    <div className="glass-card p-xl text-center text-on-surface-variant rounded-xl flex items-center justify-center gap-2 min-h-[400px]">
+      <span className="material-symbols-outlined animate-spin text-primary">progress_activity</span>
+      <span>LOADING KARNATAKA CRIME MAP GRID...</span>
+    </div>
+  ),
+});
+
+const DashboardView = dynamic(() => import("@/components/DashboardView").then((m) => m.DashboardView), {
+  ssr: false,
+  loading: () => (
+    <div className="glass-card p-xl text-center text-on-surface-variant rounded-xl flex items-center justify-center gap-2 min-h-[400px]">
+      <span className="material-symbols-outlined animate-spin text-primary">progress_activity</span>
+      <span>LOADING CRIME ANALYTICS...</span>
+    </div>
+  ),
+});
 
 interface ZiaEntity {
   value: string;
