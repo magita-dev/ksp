@@ -9,11 +9,5 @@
     "lint": "cd frontend && npx next lint",
     "seed": "cd scripts/seed && npm run seed"
   },
-  "dependencies": {
-    "@types/nodemailer": "^8.0.1",
-    "jspdf": "^4.2.1",
-    "jspdf-autotable": "^5.0.8",
-    "nodemailer": "^9.0.3",
-    "recharts": "^3.10.1"
-  }
+  "dependencies": {}
 }

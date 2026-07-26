@@ -5,8 +5,6 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase-browser";
 
-export const dynamic = "force-dynamic";
-
 type Step = "request" | "verify" | "reset" | "done";
 
 export default function ForgotPasswordPage() {

@@ -7,8 +7,6 @@ import { createClient } from "@/lib/supabase-browser";
 import { useAuth, DEFAULT_DEMO_OFFICER, type OfficerProfile } from "@/lib/auth-context";
 import { authenticateOrCreateOfficer, saveOfficerAccount } from "@/lib/officer-store";
 
-export const dynamic = "force-dynamic";
-
 export default function LoginPage() {
   const router = useRouter();
   const supabase = createClient();

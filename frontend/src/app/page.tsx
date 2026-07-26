@@ -10,8 +10,6 @@ import { useAuth } from "@/lib/auth-context";
 import { tierLabel } from "@/lib/tiers";
 import { generateQueryReportPdf } from "@/lib/pdfExporter";
 
-export const dynamic = "force-dynamic";
-
 interface ZiaEntity {
   value: string;
   type: string;

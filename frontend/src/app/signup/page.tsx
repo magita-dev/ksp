@@ -8,8 +8,6 @@ import { TIERS, type Tier } from "@/lib/tiers";
 import { saveOfficerAccount } from "@/lib/officer-store";
 import { useAuth, type OfficerProfile } from "@/lib/auth-context";
 
-export const dynamic = "force-dynamic";
-
 export default function SignupPage() {
   const router = useRouter();
   const supabase = createClient();
