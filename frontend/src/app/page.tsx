@@ -263,6 +263,7 @@ export default function MainPage() {
             </div>
 
             <button
+              suppressHydrationWarning
               onClick={() => setIsNewCaseModalOpen(true)}
               className="bg-primary text-on-primary hover:bg-primary/90 font-bold px-md py-sm rounded text-xs font-label-md uppercase tracking-wider flex items-center gap-1 cursor-pointer"
             >
@@ -271,6 +272,7 @@ export default function MainPage() {
             </button>
 
             <button
+              suppressHydrationWarning
               onClick={() => signOut()}
               className="border border-outline-variant text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high p-sm rounded text-xs font-label-md flex items-center gap-1 cursor-pointer"
               title="Sign Out"
@@ -285,6 +287,7 @@ export default function MainPage() {
       <div className="w-full bg-surface-container-low border-b border-outline-variant/40 px-margin flex items-center justify-between overflow-x-auto z-40">
         <div className="flex items-center gap-xs py-1">
           <button
+            suppressHydrationWarning
             onClick={() => setActiveTab("query")}
             className={`px-md py-2 text-xs font-label-md uppercase tracking-wider rounded-lg flex items-center gap-1.5 transition-all cursor-pointer ${
               activeTab === "query"
@@ -297,6 +300,7 @@ export default function MainPage() {
           </button>
 
           <button
+            suppressHydrationWarning
             onClick={() => setActiveTab("map")}
             className={`px-md py-2 text-xs font-label-md uppercase tracking-wider rounded-lg flex items-center gap-1.5 transition-all cursor-pointer ${
               activeTab === "map"
@@ -309,6 +313,7 @@ export default function MainPage() {
           </button>
 
           <button
+            suppressHydrationWarning
             onClick={() => setActiveTab("database")}
             className={`px-md py-2 text-xs font-label-md uppercase tracking-wider rounded-lg flex items-center gap-1.5 transition-all cursor-pointer ${
               activeTab === "database"
@@ -321,6 +326,7 @@ export default function MainPage() {
           </button>
 
           <button
+            suppressHydrationWarning
             onClick={() => setActiveTab("dashboard")}
             className={`px-md py-2 text-xs font-label-md uppercase tracking-wider rounded-lg flex items-center gap-1.5 transition-all cursor-pointer ${
               activeTab === "dashboard"
@@ -453,6 +459,7 @@ export default function MainPage() {
 
             {/* Input Form */}
             <form
+              suppressHydrationWarning
               onSubmit={handleSubmit}
               className="mt-sm glass-panel p-sm rounded-xl border border-outline-variant/40 flex items-center gap-sm shadow-xl"
             >
@@ -469,6 +476,7 @@ export default function MainPage() {
               />
 
               <button
+                suppressHydrationWarning
                 type="button"
                 onClick={() =>
                   setVoiceLocale((prev) => (prev === "en-IN" ? "kn-IN" : "en-IN"))
@@ -486,6 +494,7 @@ export default function MainPage() {
               />
 
               <button
+                suppressHydrationWarning
                 type="submit"
                 disabled={loading || !input.trim()}
                 className="bg-primary text-on-primary px-lg py-2 rounded font-bold font-label-md text-xs uppercase tracking-wider hover:bg-primary/90 cursor-pointer disabled:opacity-50 flex items-center gap-1 shadow"

@@ -141,6 +141,7 @@ export default function VoiceInput({
       )}
 
       <button
+        suppressHydrationWarning
         type="button"
         onClick={handleMicClick}
         disabled={disabled}
